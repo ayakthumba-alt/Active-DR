@@ -1,2 +1,6 @@
 nmap -p 445 --script smb-security-mode <victim IP>
 
+Or 
+
+nmap -p 445 --script smb2-security-mode <victimIP>
+
