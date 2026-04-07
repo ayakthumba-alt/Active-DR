@@ -1,6 +1,10 @@
-nmap -p 445 --script smb-security-mode <victim IP>
+nmap -p 445/139 --script smb-security-mode <victim IP>
 
 Or 
 
-nmap -p 445 --script smb2-security-mode <victimIP>
+nmap -p 445/139 --script smb2-security-mode <victimIP>   (this is new version even enable if it vulnerable it says not required)
+
+
+
+
 
