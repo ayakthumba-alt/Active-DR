@@ -1,0 +1,1 @@
+where /r C:\ *adminflag.txt*   (search for any file adminflag.txt is the filename)
