@@ -2,3 +2,14 @@ If we got the user password from kerbrute we can perform multiple smb Enumeratio
 
 1st of All: Check for critical vulnerability ##
             nxc smb <target_ip> -u 'cpent' -p 'Pa$$w0rd123' -M zerologon -M ms17-010 -M nopac -M petitpotam -M spooler -M webdav
+
+
+Users:  nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --users
+
+Shares : nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --shares
+
+Groups: nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --groups
+
+Bloodhound : bloodhound-python -u 'cpent' -p 'Pa$$w0rd123' -d 'ECC.LOCALNET' -dc '2012-DC.ECC.LOCALNET' -gc '2012-DC.ECC.LOCALNET' -c All
+
+
