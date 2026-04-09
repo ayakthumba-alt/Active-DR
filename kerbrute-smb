@@ -1,0 +1,4 @@
+If we got the user password from kerbrute we can perform multiple smb Enumeration:
+
+1st of All: Check for critical vulnerability ##
+            nxc smb <target_ip> -u 'cpent' -p 'Pa$$w0rd123' -M zerologon -M ms17-010 -M nopac -M petitpotam -M spooler -M webdav
