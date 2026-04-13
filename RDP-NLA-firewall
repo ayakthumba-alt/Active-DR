@@ -4,3 +4,4 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnec
 
 net stop termservice /y && net start termservice
 
+xfreerdp /u:Administrator /p:'Pa$$w0rd' /d:. /v:172.25.170.190 /cert:ignore
